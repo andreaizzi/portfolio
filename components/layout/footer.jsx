@@ -33,13 +33,14 @@ export default function Footer() {
 			<Container spacing={['verticalXXLrg', 'bottomLrg']}>
 				<section className={css.sections}>
 					<ul className={css.thanks}>
-						<li><h4>Acknowledgments</h4></li>
+						<li><h4>Contacts</h4></li>
 						{
-						content.acknowledgments.map( ({ person, link, note }, index) => {
+						content.contacts.map( ({ type, link, note, icon }, index) => {
 							return (
 								<li key={index}>
-									<a href={link} rel="noreferrer" target="_blank">{person} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></a>
-									<p>{note}</p>
+									<p>{type}</p>
+									<Icon icon={['fad', icon]} />{' '}
+									<a href={link} rel="noreferrer" target="_blank">{note} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></a>
 								</li>
 							)
 						})

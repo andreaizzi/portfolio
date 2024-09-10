@@ -32,14 +32,16 @@ library.add(fat, fal, fas, fad, far, fab)
  * @returns {jsx} 	<Icon />
  */
 export default function Icon({ icon }) {
+	const [iconType, iconKey] = icon
 
-	const [ iconType, iconKey ] = icon
+	const [stateIconKey, setIconKey] = useState('circle-notch')
 
-	const [ stateIconKey, setIconKey ] = useState('circle-notch')
+	useEffect(() => setIconKey(iconKey), [iconKey])
 
-	useEffect( () => setIconKey( iconKey ), [ iconKey ] )
+	// Use 'fas' as the default icon type if not specified
+	const prefix = iconType || 'fas'
 
 	return (
-		<FontAwesomeIcon icon={[ iconType, stateIconKey ]} />
+		<FontAwesomeIcon icon={[prefix, stateIconKey]} />
 	)
 }

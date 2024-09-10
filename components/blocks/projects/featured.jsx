@@ -26,30 +26,35 @@ export default function FeaturedProject({ content }, index) {
 	}, [ controls, inView ] )
 
 	return (
-		<m.section 	
+		<m.section
 			key={index}
-			className={css.project} 
+			className={css.project}
 			//framer-motion
 			ref={ref}
 			variants={container}
 			initial={[ "rest", "hidden" ]}
 			whileHover="hover"
-			animate={controls} >
-			
+			animate={controls}
+			onClick={() => url && window.open(url, '_blank')}
+			style={{ cursor: url ? 'pointer' : 'default' }}
+		>
+
 			<div className={css.details}>
 				<div className={css.projectHeader}>
 					<div className={css.header}>
-						<h3 className="highlight">{project}</h3><span className={css.privateOr}><i className="devicon-github-plain"></i>{repo}</span>	
+						<h3 className="highlight">{project}</h3><span className={css.privateOr}><i className="devicon-github-plain"></i>{repo}</span>
 					</div>
 					<div className={css.description}>
-						<p><strong>{descriptionTitle}</strong> {description}</p>
+						<p><strong>{descriptionTitle}</strong>{description}</p>
 					</div>
 					<div className={css.stackContainer}>
 						<Badges list={stack} block="stack" fullContainer={false} color={false} />
 					</div>
-					<m.div variants={''} className={css.viewProject}>
-						<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
-					</m.div>
+					{url && (
+						<m.div variants={''} className={css.viewProject}>
+							<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
+						</m.div>
+					)}
 				</div>
 			</div>
 
@@ -72,7 +77,7 @@ export default function FeaturedProject({ content }, index) {
 }
 
 const container = {
-	hidden: { 
+	hidden: {
 		transition: {
 			delayChildren: 0.125,
 			staggerChildren: 0.0625

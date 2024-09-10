@@ -91,7 +91,7 @@ function IconModule({ iconKey, iconType, color }) {
 		case 'fas':
 			return ( <Icon icon={[ iconType, iconKey ]} /> )
 		case 'devicon':
-			return ( <i className={`devicon-${iconKey}-plain ${colored}`} /> )
+			return ( <i className={`devicon-${iconKey}${iconKey.endsWith('-original') || iconKey.endsWith('-wordmark') ? '' : '-plain'} ${colored}`} /> )
 		default:
 			return ( '' )
 	}

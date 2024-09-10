@@ -1,50 +1,41 @@
 {
-	"acknowledgments": [
+	"contacts": [
 		{ 
-			"person": "Jihad Hassan - Marketing Director",
-			"link": "",
-			"note": "Thank you for all the advice and feedback."
+			"type": "Email",
+			"link": "mailto:info@andreaizzi.com",
+			"note": "info@andreaizzi.com",
+			"icon": "envelope"
 		},
 		{ 
-			"person": "Colorpong - Artist",
-			"link": "ttps://www.youworkforthem.com/designer/536/colorpong?aff=1115",
-			"note": "Checkout their amazing vector illustrations."
-		},
-		{ 
-			"person": "Brittany Chiang - Software Engineer",
-			"link": "https://brittanychiang.com/",
-			"note": "A major inspiration to create an open source theme."
-		},
-		{ 
-			"person": "Vercel - Platform",
-			"link": "https://vercel.com/docs",
-			"note": "Host your own Next.js project for free!"
+			"type": "Phone",
+			"link": "tel:+393249574139",
+			"note": "+39 324 9574139",
+			"icon": "phone"
 		}
 	],
-
 	"links": [
 		{ 
-			"person": "YWFT Creative Marketplace",
-			"link": "https://www.youworkforthem.com/?aff=1115",
-			"note": "Best in class creative assets."
+			"person": "FantaClasse",
+			"link": "https://fantaclasse.it",
+			"note": "Turn your classroom into a competition, challenge your classmates, and climb the leaderboard!"
 		}
 	],
 
 	"social": [
 		{
-			"url": "https://medium.com/@--andrewnelson",
+			"url": "https://medium.com/@andreaizzi",
 			"icon": "medium"
 		},
 		{
-			"url": "https://dev.to/andrewnelson",
+			"url": "https://dev.to/andreaizzi",
 			"icon": "dev"
 		},
 		{
-			"url": "https://www.linkedin.com/in/--andrewnelson/",
+			"url": "https://www.linkedin.com/in/andrea-izzi/",
 			"icon": "linkedin"
 		},
 		{
-			"url": "https://github.com/atlamors",
+			"url": "https://github.com/andreaizzi",
 			"icon": "github"
 		}
 	]
