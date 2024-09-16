@@ -10,7 +10,7 @@ import css from '../../../styles/sections/projects/recent.module.scss'
 
 export default function GitProjects({ repos, user }) {
 	return (
-		<Section classProp={css.section}>	
+		<Section classProp={css.section}>
 			<Container classProp={css.container} spacing={'verticalXXXLrg'}>
 				<h3>Recent Projects</h3>
 				<section className={css.profile}>
@@ -43,7 +43,7 @@ export default function GitProjects({ repos, user }) {
 								<span className={css.topicsContainer}>
 									{
 									topics.map( (e, index) => {
-										return ( <span key={index} className={css.topics}><i class="devicon-github-plain"></i> {e}</span> )
+										return ( <span key={index} className={css.topics}><i className="devicon-github-plain"></i> {e}</span> )
 									})
 									}
 								</span>
